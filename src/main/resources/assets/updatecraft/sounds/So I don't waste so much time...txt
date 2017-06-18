@@ -1,0 +1,4 @@
+For searching for vanila minecraft sounds, search .minecraft/assets/idexes/x.y.z.json
+Then, find the "hash" number and search in .minecraft/assets/objects for that "hash"
+Copy file to desktop(or any convenient folder) and add ".ogg" to the end of the file.
+Play file in VLC to make sure you grabbed the right one.

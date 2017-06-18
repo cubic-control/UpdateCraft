@@ -1,0 +1,18 @@
+{
+      "mob.rabbit.hop": {
+    "category" : "master",
+    "sounds" : [ "hop3" ]
+    },
+      "mob.rabbit.idle": {
+    "category" : "master",
+    "sounds" : [ "idle1" ]
+    },
+      "mob.rabbit.hurt": {
+    "category" : "master",
+    "sounds" : [ "hurt4" ]
+    },
+      "mob.rabbit.death": {
+    "category" : "master",
+    "sounds" : [ "bunnymurder" ]
+    }
+}

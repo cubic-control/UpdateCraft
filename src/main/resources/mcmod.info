@@ -1,0 +1,16 @@
+[
+{
+  "modid": "UpdateCraft",
+  "name": "UpdateCraft",
+  "description": "Updates so you don't have too.",
+  "version": "BETA",
+  "mcversion": "1.7",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["cubic_control"],
+  "credits": "cubic_control for backporting these features.",
+  "logoFile": "UpdateCraft.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
