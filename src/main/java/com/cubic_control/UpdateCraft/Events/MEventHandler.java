@@ -8,6 +8,7 @@ public class MEventHandler {
 	public static void registerEvents(){
 		FMLCommonHandler.instance().bus().register(new MEventUpdateChecker());
 		MinecraftForge.EVENT_BUS.register(new MEventVanilaAIChange());
+		MinecraftForge.EVENT_BUS.register(new MEventTotem());
 	}
 
 }

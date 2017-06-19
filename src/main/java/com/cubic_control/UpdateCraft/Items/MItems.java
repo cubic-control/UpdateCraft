@@ -42,6 +42,11 @@ public class MItems {
 	public static Item shield;
 	public static Item spectral_arrow;
 	public static Item tipped_arrow;
+	//1.10
+	//1.11
+	public static Item shulker_shell;
+	public static Item totem_of_undying;
+	//1.12
 	//Universal
 	public static Item spawn_egg;
 	
@@ -79,6 +84,11 @@ public class MItems {
 		shield = new ModItemShield("shield");
 		//spectral_arrow = new ModItemSpectralArrow();
 		tipped_arrow = new ModItemTippedArrow("tipped_arrow");
+		//1.10
+		//1.11
+		shulker_shell = new ModItem("shulker_shell");
+		totem_of_undying = new ModItem("totem").setMaxStackSize(1);
+		//1.12
 	}
 	
 	public static void changeItem(){

@@ -14,5 +14,9 @@
       "mob.rabbit.death": {
     "category" : "master",
     "sounds" : [ "bunnymurder" ]
+    },
+      "item.totem.use_totem": {
+    "category" : "master",
+    "sounds" : [ "item/totem/use_totem" ]
     }
 }

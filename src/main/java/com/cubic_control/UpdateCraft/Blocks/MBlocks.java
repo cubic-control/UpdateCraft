@@ -54,6 +54,10 @@ public class MBlocks {
 	public static Block chorus_flower;
 	public static Block chorus_plant;
 	//1.10
+	public static Block magma;
+	public static Block nether_wart_block;
+	public static Block red_nether_brick;
+	public static Block bone_block;
 	//1.11
 	//1.12
 	public static Block concrete;
@@ -114,6 +118,10 @@ public class MBlocks {
 		chorus_flower = new ModBlockChorusFlower("chorus_flower");
 		chorus_plant = new ModBlockChorusPlant("chorus_plant");
 		//1.10
+		magma = new ModBlockMagma(Material.rock, "magma", 0.5F, "pickaxe", 0, 2.5F, Block.soundTypeStone);
+		nether_wart_block = new ModBlock(Material.cloth, "nether_wart_block", 1.0F, 5.0F, Block.soundTypeCloth);
+		red_nether_brick = new ModBlock(Material.rock, "red_nether_brick", 2.0F, "pickaxe", 0, 30.0F, Block.soundTypeStone);
+		bone_block = new ModBlockPillar(Material.rock, "bone_block", 2.0F, "pickaxe", 0, 10.0F, Block.soundTypeStone);
 		//1.11
 		//1.12
 		concrete = new ModBlockColored(Material.rock, "concrete", 1.8F, "pickaxe", 0, 9.0F, Block.soundTypeStone);

@@ -74,6 +74,11 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(Items.dye, 1, 1), "X", 'X', MItems.beetroot);
 		GameRegistry.addRecipe(new ItemStack(MItems.beetroot_soup), "XXX", "XXX", " Y ", 'X', MItems.beetroot, 'Y', Items.bowl);
 		//1.10
+		GameRegistry.addRecipe(new ItemStack(MBlocks.magma), "mm", "mm", 'm', Items.magma_cream);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.nether_wart_block), "nnn", "nnn", "nnn", 'n', Items.nether_wart);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.red_nether_brick), "wb", "bw", 'w', Items.nether_wart, 'b', Items.netherbrick);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.bone_block), "bbb", "bbb", "bbb", 'b', new ItemStack(Items.dye, 1, 15));
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 9, 15), MBlocks.bone_block);
 		//1.11
 		//1.12
 		for(int i = 0; i < 16; i++){

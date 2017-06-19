@@ -21,6 +21,7 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 
 import org.lwjgl.opengl.GL11;
 
+import com.cubic_control.UpdateCraft.Achievements.MAchievements;
 import com.cubic_control.UpdateCraft.Blocks.MBlocks;
 import com.cubic_control.UpdateCraft.CreativeTabs.MCreativeTabs;
 import com.cubic_control.UpdateCraft.Entities.MEntities;
@@ -31,6 +32,7 @@ import com.cubic_control.UpdateCraft.Network.ArmorStandInteractHandler;
 import com.cubic_control.UpdateCraft.Network.ArmorStandInteractMessage;
 import com.cubic_control.UpdateCraft.Network.StartFallFlying;
 import com.cubic_control.UpdateCraft.World.MVillage;
+import com.cubic_control.UpdateCraft.World.MWorld;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
@@ -75,9 +77,11 @@ public class MainRegistry {
 		MCreativeTabs.createTabs();
 		MBlocks.Main();
 		MItems.createItem();
+		MWorld.MainRegistry();
 		MCraftingManager.createRecipes();
 		MEntities.mainRegistry();
 		MVillage.init();
+		MAchievements.createAchievements();
 		snw = NetworkRegistry.INSTANCE.newSimpleChannel(RefStrings.MODID);
 		snw.registerMessage(ArmorStandInteractHandler.class, ArmorStandInteractMessage.class, 0, Side.SERVER);
 		snw.registerMessage(StartFallFlying.class, StartFallFlying.class, 0, Side.SERVER);
