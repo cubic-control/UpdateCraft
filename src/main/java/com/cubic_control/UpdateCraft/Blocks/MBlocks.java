@@ -53,6 +53,27 @@ public class MBlocks {
 	public static Block beetroots;
 	public static Block chorus_flower;
 	public static Block chorus_plant;
+	//1.10
+	//1.11
+	//1.12
+	public static Block concrete;
+	public static Block concrete_powder;
+	public static Block white_glazed_terracotta;
+	public static Block orange_glazed_terracotta;
+	public static Block magenta_glazed_terracotta;
+	public static Block light_blue_glazed_terracotta;
+	public static Block yellow_glazed_terracotta;
+	public static Block lime_glazed_terracotta;
+	public static Block pink_glazed_terracotta;
+	public static Block gray_glazed_terracotta;
+	public static Block silver_glazed_terracotta;
+	public static Block cyan_glazed_terracotta;
+	public static Block purple_glazed_terracotta;
+	public static Block blue_glazed_terracotta;
+	public static Block brown_glazed_terracotta;
+	public static Block green_glazed_terracotta;
+	public static Block red_glazed_terracotta;
+	public static Block black_glazed_terracotta;
 	
 	public static void createBlock(){
 		//1.8
@@ -92,6 +113,27 @@ public class MBlocks {
 		beetroots = new ModBlockBeetroots("beetroots");
 		chorus_flower = new ModBlockChorusFlower("chorus_flower");
 		chorus_plant = new ModBlockChorusPlant("chorus_plant");
+		//1.10
+		//1.11
+		//1.12
+		concrete = new ModBlockColored(Material.rock, "concrete", 1.8F, "pickaxe", 0, 9.0F, Block.soundTypeStone);
+		concrete_powder = new ModBlockConcretePowder(Material.sand, "concrete_powder", 0.5F, "shovel", 0, 2.5F, Block.soundTypeGravel);
+		white_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_white", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		orange_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_orange", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		magenta_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_magenta", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		light_blue_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_light_blue", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		yellow_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_yellow", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		lime_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_lime", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		pink_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_pink", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		gray_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_gray", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		silver_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_silver", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		cyan_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_cyan", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		purple_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_purple", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		blue_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_blue", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		brown_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_brown", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		green_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_green", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		red_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_red", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		black_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_black", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
 	}
 	
 	public static void changeBlock(){
