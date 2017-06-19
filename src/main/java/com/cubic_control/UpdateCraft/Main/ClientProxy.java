@@ -1,11 +1,9 @@
 package com.cubic_control.UpdateCraft.Main;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 
-import com.cubic_control.UpdateCraft.Elytra.ElytraSound;
 import com.cubic_control.UpdateCraft.Entities.EntityArmorStand;
 import com.cubic_control.UpdateCraft.Entities.EntityEndermite;
 import com.cubic_control.UpdateCraft.Entities.EntityLingeringEffect;

@@ -73,6 +73,34 @@ public class MCraftingManager {
 		//GameRegistry.addRecipe(new ItemStack(MBlocks.purpur_slab), "XXX", 'X', MBlocks.purpur_block);
 		GameRegistry.addRecipe(new ItemStack(Items.dye, 1, 1), "X", 'X', MItems.beetroot);
 		GameRegistry.addRecipe(new ItemStack(MItems.beetroot_soup), "XXX", "XXX", " Y ", 'X', MItems.beetroot, 'Y', Items.bowl);
+		//1.10
+		//1.11
+		//1.12
+		for(int i = 0; i < 16; i++){
+			int k = (16 - i) - 1;
+			if(k < 0){
+				k = -k;
+			}
+			//DEBUG:
+			//System.out.println("k = " + k);
+			GameRegistry.addRecipe(new ItemStack(MBlocks.concrete_powder, 1, i), "SGS", "GdG", "SGS", 'S', Blocks.sand, 'G', Blocks.gravel, 'd', new ItemStack(Items.dye, 1, k));
+		}
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 0), new ItemStack(MBlocks.white_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 1), new ItemStack(MBlocks.orange_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 2), new ItemStack(MBlocks.magenta_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 3), new ItemStack(MBlocks.light_blue_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 4), new ItemStack(MBlocks.yellow_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 5), new ItemStack(MBlocks.lime_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 6), new ItemStack(MBlocks.pink_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 7), new ItemStack(MBlocks.gray_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 8), new ItemStack(MBlocks.silver_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 9), new ItemStack(MBlocks.cyan_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 10), new ItemStack(MBlocks.purple_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 11), new ItemStack(MBlocks.blue_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 12), new ItemStack(MBlocks.brown_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 13), new ItemStack(MBlocks.green_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 14), new ItemStack(MBlocks.red_glazed_terracotta), 0f);
+		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 15), new ItemStack(MBlocks.black_glazed_terracotta), 0f);
 	}
 	public static void removeRecipes(){
 		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
