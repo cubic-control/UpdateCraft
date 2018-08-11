@@ -1,9 +1,9 @@
 package com.cubic_control.UpdateCraft.Entities;
 
-import com.cubic_control.UpdateCraft.Entities.AI.BlockPos;
 import com.cubic_control.UpdateCraft.Entities.AI.EntityAIMoveToBlock;
 import com.cubic_control.UpdateCraft.Items.MItems;
 import com.cubic_control.UpdateCraft.Lib.RefStrings;
+import com.cubic_control.cubic_core.Utils.BlockPos;
 
 import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -465,7 +465,7 @@ public class EntityRabbit extends EntityAnimal{
 
 			if(getIsAboveDestination()){
 				World world = worldObj;
-				BlockPos blockpos = destinationBlock.up();
+				BlockPos blockpos = destinationBlock.above();
 				Block block = world.getBlock(blockpos.getX(), blockpos.getY(), blockpos.getZ());
 				int meta = world.getBlockMetadata(blockpos.getX(), blockpos.getY(), blockpos.getZ());
 
@@ -479,11 +479,11 @@ public class EntityRabbit extends EntityAnimal{
 		}
 		@Override
 		protected boolean shouldMoveTo(World world, BlockPos pos) {
-			pos = pos.up();
+			pos = pos.above();
 			Block block = world.getBlock(pos.getX(), pos.getY(), pos.getZ());
 			int meta = world.getBlockMetadata(pos.getX(), pos.getY(), pos.getZ());
 
-			if(block instanceof BlockCarrot && meta >= 7 && field_179498_d && !field_179499_e){
+			if(block instanceof BlockCarrot && meta >= 7 && field_179498_d && !field_179499_e) {
 				field_179499_e = true;
 				return true;
 			}

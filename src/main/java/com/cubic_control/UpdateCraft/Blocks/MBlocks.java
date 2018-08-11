@@ -11,7 +11,6 @@ public class MBlocks {
 	public static void Main(){
 		createBlock();
 		changeBlock();
-		MOreDictionary.initModEntries();
 	}
 	//1.8
 	public static Block diorite;
@@ -34,6 +33,7 @@ public class MBlocks {
 	public static Block standing_banner;
 	public static Block wall_banner;
 	public static Block barrier;
+	public static Block oak_fence;
 	public static Block spruce_fence;
 	public static Block birch_fence;
 	public static Block jungle_fence;
@@ -53,12 +53,16 @@ public class MBlocks {
 	public static Block beetroots;
 	public static Block chorus_flower;
 	public static Block chorus_plant;
+	public static Block end_rod;
+	public static Block end_bricks;
+	public static Block grass_path;
 	//1.10
 	public static Block magma;
 	public static Block nether_wart_block;
 	public static Block red_nether_brick;
 	public static Block bone_block;
 	//1.11
+	public static Block observer;
 	//1.12
 	public static Block concrete;
 	public static Block concrete_powder;
@@ -78,6 +82,26 @@ public class MBlocks {
 	public static Block green_glazed_terracotta;
 	public static Block red_glazed_terracotta;
 	public static Block black_glazed_terracotta;
+	public static ModBlockBed bed_black;
+	public static ModBlockBed bed_red;
+	public static ModBlockBed bed_green;
+	public static ModBlockBed bed_brown;
+	public static ModBlockBed bed_blue;
+	public static ModBlockBed bed_purple;
+	public static ModBlockBed bed_cyan;
+	public static ModBlockBed bed_silver;
+	public static ModBlockBed bed_gray;
+	public static ModBlockBed bed_pink;
+	public static ModBlockBed bed_lime;
+	public static ModBlockBed bed_yellow;
+	public static ModBlockBed bed_light_blue;
+	public static ModBlockBed bed_magenta;
+	public static ModBlockBed bed_orange;
+	public static ModBlockBed bed_white;
+	//Custom
+	public static Block piston;
+	public static Block stickyPiston;
+	public static Block pistonHead;
 	
 	public static void createBlock(){
 		//1.8
@@ -98,6 +122,7 @@ public class MBlocks {
 		sea_lantern = new ModBlock(Material.glass, "sea_lantern", 0.3f, 1.5f, Block.soundTypeGlass).setLightLevel(1f);
 		sponge = new ModBlockSponge();
 		slime = new ModBlockSlime("slime");
+		oak_fence = new ModBlockFence("planks_oak", Material.wood, "oak_fence").setCreativeTab(CreativeTabs.tabDecorations);
 		spruce_fence = new ModBlockFence("planks_spruce", Material.wood, "spruce_fence");
 		birch_fence = new ModBlockFence("planks_birch", Material.wood, "birch_fence");
 		jungle_fence = new ModBlockFence("planks_jungle", Material.wood, "jungle_fence");
@@ -117,12 +142,16 @@ public class MBlocks {
 		beetroots = new ModBlockBeetroots("beetroots");
 		chorus_flower = new ModBlockChorusFlower("chorus_flower");
 		chorus_plant = new ModBlockChorusPlant("chorus_plant");
+		end_rod = new ModBlockEndRod("end_rod");
+		end_bricks = new ModBlockEndBricks("end_bricks");
+		grass_path = new ModBlockGrassPath("grass_path");
 		//1.10
 		magma = new ModBlockMagma(Material.rock, "magma", 0.5F, "pickaxe", 0, 2.5F, Block.soundTypeStone);
 		nether_wart_block = new ModBlock(Material.cloth, "nether_wart_block", 1.0F, 5.0F, Block.soundTypeCloth);
 		red_nether_brick = new ModBlock(Material.rock, "red_nether_brick", 2.0F, "pickaxe", 0, 30.0F, Block.soundTypeStone);
 		bone_block = new ModBlockPillar(Material.rock, "bone_block", 2.0F, "pickaxe", 0, 10.0F, Block.soundTypeStone);
 		//1.11
+		observer = new ModBlockObserver(Material.rock, "observer", 3.5F, "pickaxe", 0, 17.5F, Block.soundTypeStone);
 		//1.12
 		concrete = new ModBlockColored(Material.rock, "concrete", 1.8F, "pickaxe", 0, 9.0F, Block.soundTypeStone);
 		concrete_powder = new ModBlockConcretePowder(Material.sand, "concrete_powder", 0.5F, "shovel", 0, 2.5F, Block.soundTypeGravel);
@@ -142,6 +171,26 @@ public class MBlocks {
 		green_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_green", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
 		red_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_red", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
 		black_glazed_terracotta = new ModBlockRotate(Material.rock, "glazed_terracotta_black", 1.4F, "pickaxe", 0, 7.0F, Block.soundTypeStone);
+		bed_black = new ModBlockBed("bed_black", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_red = new ModBlockBed("bed_red", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_green = new ModBlockBed("bed_green", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_brown = new ModBlockBed("bed_brown", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_blue = new ModBlockBed("bed_blue", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_purple = new ModBlockBed("bed_purple", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_cyan = new ModBlockBed("bed_cyan", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_silver = new ModBlockBed("bed_silver", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_gray = new ModBlockBed("bed_gray", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_pink = new ModBlockBed("bed_pink", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_lime = new ModBlockBed("bed_lime", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_yellow = new ModBlockBed("bed_yellow", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_light_blue = new ModBlockBed("bed_light_blue", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_magenta = new ModBlockBed("bed_magenta", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_orange = new ModBlockBed("bed_orange", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		bed_white = new ModBlockBed("bed_white", 0.2F, "", 0, 0.2F, Block.soundTypeCloth);
+		//Custom
+		piston = new ModBlockPistonBase_normal();
+		stickyPiston = new ModBlockPistonBase_sticky();
+		pistonHead = new ModBlockPistonHead();
 	}
 	
 	public static void changeBlock(){
@@ -149,5 +198,11 @@ public class MBlocks {
 		Blocks.ladder.setHarvestLevel("axe", 0);
 		Blocks.melon_block.setHarvestLevel("axe", 0);
 		Blocks.trapped_chest.setCreativeTab(CreativeTabs.tabRedstone);
+		Blocks.fence.setCreativeTab(null);
+		Blocks.piston.setCreativeTab(null);
+		Blocks.sticky_piston.setCreativeTab(null);
+		//BlockReplaceHelper.replaceBlock2(Blocks.piston, ModBlockPistonBase_normal.class);
+		//BlockReplaceHelper.replaceBlock2(Blocks.sticky_piston, ModBlockPistonBase_sticky.class);
+		//BlockReplaceHelper.replaceBlock2(Blocks.piston_head, ModBlockPistonHead.class);
 	}
 }

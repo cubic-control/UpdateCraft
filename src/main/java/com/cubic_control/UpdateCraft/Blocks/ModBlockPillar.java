@@ -14,11 +14,12 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
 public class ModBlockPillar extends BlockRotatedPillar{
+	String texName;
 	
 	protected ModBlockPillar(Material par1, String par2, float par3, String par4, int par5, float par6, SoundType par7) {
 		super(par1);
 		this.setBlockName(par2);
-		this.setBlockTextureName(RefStrings.MODID + ":" + par2);
+		texName = RefStrings.MODID + ":" + par2;
 		this.setCreativeTab(MCreativeTabs.tabBlocks);
 		this.setHardness(par3);
 		this.setHarvestLevel(par4, par5);
@@ -30,7 +31,7 @@ public class ModBlockPillar extends BlockRotatedPillar{
 	protected ModBlockPillar(Material par1, String par2, float par3, float par6, SoundType par7) {
 		super(par1);
 		this.setBlockName(par2);
-		this.setBlockTextureName(RefStrings.MODID + ":" + par2);
+		texName = RefStrings.MODID + ":" + par2;
 		this.setCreativeTab(MCreativeTabs.tabBlocks);
 		this.setHardness(par3);
 		this.setResistance(par6);
@@ -41,7 +42,7 @@ public class ModBlockPillar extends BlockRotatedPillar{
 	protected ModBlockPillar(Material par1, String par2, String par3, float par4, String par5, int par6, float par7, SoundType par8) {
 		super(par1);
 		this.setBlockName(par2);
-		this.setBlockTextureName(RefStrings.MODID + ":" + par3);
+		texName = RefStrings.MODID + ":" + par3;
 		this.setCreativeTab(MCreativeTabs.tabBlocks);
 		this.setHardness(par4);
 		this.setHarvestLevel(par5, par6);
@@ -53,7 +54,7 @@ public class ModBlockPillar extends BlockRotatedPillar{
 	protected ModBlockPillar(Block par1, String par2, float par3, float par4, SoundType par5) {
 		super(par1.getMaterial());
 		this.setBlockName(par2);
-		this.setBlockTextureName(RefStrings.MODID + ":" + par2);
+		texName = RefStrings.MODID + ":" + par2;
 		this.setCreativeTab(MCreativeTabs.tabBlocks);
 		this.setHardness(par3);
 		this.setHarvestLevel(par1.getHarvestTool(0), par1.getHarvestLevel(0));
@@ -66,13 +67,15 @@ public class ModBlockPillar extends BlockRotatedPillar{
 	protected IIcon getSideIcon(int side) {
 		return blockIcon;
 	}
-
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister reg) {
 		super.registerBlockIcons(reg);
-		blockIcon = reg.registerIcon(getTextureName() + "_side");
-		field_150164_N = reg.registerIcon(getTextureName() + "_top");
+		blockIcon = reg.registerIcon(texName + "_side");
+		field_150164_N = reg.registerIcon(texName + "_top");
+		
+		//To Prevent The System From Complaining:
+		this.setBlockTextureName(texName + "_side");
 	}
 
 }

@@ -18,7 +18,8 @@ public class MEventTotem {
 			EntityPlayer player = (EntityPlayer)event.entityLiving;
 			if(player.inventory.hasItem(MItems.totem_of_undying)){
 				if(player.getHealth() <= event.ammount){
-					player.heal(1.0F);
+					event.ammount = 0.0F;
+					player.setHealth(1.0F);
 					player.worldObj.playSoundAtEntity(player, RefStrings.MODID + ":item.totem.use_totem", 1.0F, 1.0F);
 					
 					if(!player.worldObj.isRemote){
@@ -33,9 +34,10 @@ public class MEventTotem {
 				}
 			}
 		}else{
-			if(event.entityLiving.getHeldItem().getItem() == MItems.totem_of_undying){
+			if(event.entityLiving.getHeldItem() == new ItemStack(MItems.totem_of_undying)){
 				if(event.entityLiving.getHealth() <= event.ammount){
-					event.entityLiving.heal(1.0F);
+					event.ammount = 0.0F;
+					event.entityLiving.setHealth(1.0F);
 					event.entityLiving.worldObj.playSoundAtEntity(event.entityLiving, RefStrings.MODID + ":item.totem.use_totem", 1.0F, 1.0F);
 					
 					if(!event.entityLiving.worldObj.isRemote){

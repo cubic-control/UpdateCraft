@@ -17,7 +17,7 @@ public class VersionChecker implements Runnable{
     public void run() {
         InputStream in = null;
         try{
-            in = new URL("").openStream();
+            in = new URL("https://raw.githubusercontent.com/cubic-control/UpdateCraft/master/src/main/resources/version_file.txt").openStream();
         }catch(MalformedURLException e) {
             e.printStackTrace();
         }catch(IOException e) {

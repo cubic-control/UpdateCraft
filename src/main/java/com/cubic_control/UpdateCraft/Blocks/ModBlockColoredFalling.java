@@ -3,6 +3,7 @@ package com.cubic_control.UpdateCraft.Blocks;
 import java.util.Random;
 
 import com.cubic_control.UpdateCraft.CreativeTabs.MCreativeTabs;
+import com.cubic_control.UpdateCraft.Entities.EntityFallingConcrete;
 import com.cubic_control.UpdateCraft.Items.ModItemBlockWithMetadata;
 import com.cubic_control.UpdateCraft.Lib.RefStrings;
 
@@ -54,7 +55,7 @@ public class ModBlockColoredFalling extends ModBlockColored{
             
             if(!fallInstantly && world.checkChunksExist(x - b0, y - b0, z - b0, x + b0, y + b0, z + b0)){
                 if(!world.isRemote){
-                    EntityFallingBlock entity = new EntityFallingBlock(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), this, world.getBlockMetadata(x, y, z));
+                    EntityFallingConcrete entity = new EntityFallingConcrete(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), this, world.getBlockMetadata(x, y, z));
                     this.func_149829_a(entity);
                     world.spawnEntityInWorld(entity);
                 }

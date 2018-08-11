@@ -1,5 +1,7 @@
 package com.cubic_control.UpdateCraft.Items;
 
+import java.util.List;
+
 import com.cubic_control.UpdateCraft.CreativeTabs.MCreativeTabs;
 import com.cubic_control.UpdateCraft.Lib.RefStrings;
 
@@ -21,6 +23,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * @author unascribed
+ * I removed all coloring..
+ */
 public class ModItemElytra extends ModItem{
 	
     public ModItemElytra(String name) {
@@ -53,6 +59,10 @@ public class ModItemElytra extends ModItem{
     @Override
 	public boolean isValidArmor(ItemStack stack, int armorType, Entity entity) {
 		return armorType == 1;
+	}
+    @SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean check) {
+    	list.add("DOES NOT WORK");
 	}
     
 }

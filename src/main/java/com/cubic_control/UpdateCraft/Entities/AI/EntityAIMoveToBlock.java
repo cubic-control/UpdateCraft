@@ -1,5 +1,7 @@
 package com.cubic_control.UpdateCraft.Entities.AI;
 
+import com.cubic_control.cubic_core.Utils.BlockPos;
+
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.world.World;
@@ -49,7 +51,7 @@ public abstract class EntityAIMoveToBlock extends EntityAIBase{
 	public void resetTask() {}
 	@Override
 	public void updateTask() {
-		if(theEntity.getDistanceSq(destinationBlock.up().getX(), destinationBlock.up().getY(), destinationBlock.up().getZ()) > 1.0D){
+		if(theEntity.getDistanceSq(destinationBlock.above().getX(), destinationBlock.above().getY(), destinationBlock.above().getZ()) > 1.0D){
 			isAboveDestination = false;
 			timeoutCounter++;
 
@@ -68,13 +70,13 @@ public abstract class EntityAIMoveToBlock extends EntityAIBase{
 	
 	private boolean searchForDestination() {
 		int i = searchLength;
-		BlockPos blockpos = new BlockPos(theEntity);
+		BlockPos blockpos = new BlockPos(theEntity.chunkCoordX, theEntity.chunkCoordY, theEntity.chunkCoordZ);
 
 		for(int j = 0; j <= 1; j = j > 0 ? -j : 1 - j){
 			for(int k = 0; k < i; ++k){
 				for(int l = 0; l <= k; l = l > 0 ? -l : 1 - l){
 					for(int i1 = l < k && l > -k ? k : 0; i1 <= k; i1 = i1 > 0 ? -i1 : 1 - i1){
-						BlockPos blockpos1 = blockpos.add(l, j - 1, i1);
+						BlockPos blockpos1 = blockpos.offset(l, j - 1, i1);
 
 						if(theEntity.isWithinHomeDistance(blockpos1.getX(), blockpos1.getY(), blockpos1.getZ()) && shouldMoveTo(theEntity.worldObj, blockpos1)){
 							destinationBlock = blockpos1;

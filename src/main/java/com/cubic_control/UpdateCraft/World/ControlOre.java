@@ -44,7 +44,12 @@ public class ControlOre implements IWorldGenerator {
 		addOre(MBlocks.magma, Blocks.netherrack, random, world, chunkX, chunkZ, 23, 37, 1, 4, 30);
 	}
 	
-	private void generateOverworld(Random random, int chunkX, int chunkZ, World world) {}
+	private void generateOverworld(Random random, int chunkX, int chunkZ, World world) {
+		//Code Taken From OVERLOAD
+		addOre(MBlocks.andesite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.diorite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+		addOre(MBlocks.granite, Blocks.stone, random, world, chunkX, chunkZ, 0, 256, 5, 15, 30);
+	}
 	
 	private void generateEnd(Random random, int chunkX, int chunkZ, World world) {}
 }

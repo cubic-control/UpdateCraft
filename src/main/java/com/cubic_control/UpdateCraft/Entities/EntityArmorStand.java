@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import com.cubic_control.UpdateCraft.Items.MItems;
 import com.cubic_control.UpdateCraft.Main.MainRegistry;
 import com.cubic_control.UpdateCraft.Network.ArmorStandInteractMessage;
+import com.cubic_control.UpdateCraft.Network.ModPacketHandler;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -201,7 +202,7 @@ public class EntityArmorStand extends EntityLiving {
 	@Override
 	public boolean interact(EntityPlayer player) {
 		if(worldObj.isRemote){
-			MainRegistry.snw.sendToServer(new ArmorStandInteractMessage(worldObj.provider.dimensionId, this, player));
+			ModPacketHandler.snw.sendToServer(new ArmorStandInteractMessage(worldObj.provider.dimensionId, this, player));
 			return true;
 		}
 		return false;

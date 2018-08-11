@@ -6,9 +6,17 @@ import cpw.mods.fml.common.FMLCommonHandler;
 public class MEventHandler {
 	
 	public static void registerEvents(){
-		FMLCommonHandler.instance().bus().register(new MEventUpdateChecker());
-		MinecraftForge.EVENT_BUS.register(new MEventVanilaAIChange());
-		MinecraftForge.EVENT_BUS.register(new MEventTotem());
+		reg(new MEventUpdateChecker());
+		reg(new MEventVanilaAIChange());
+		reg(new MEventTotem());
+		reg(new MEventGrassPath());
+		reg(new MEventEnchantments());
+		reg(new MEventConfig());
+	}
+	
+	private static void reg(Object target){
+		FMLCommonHandler.instance().bus().register(target);
+		MinecraftForge.EVENT_BUS.register(target);
 	}
 
 }

@@ -1,7 +1,9 @@
 package com.cubic_control.UpdateCraft.Items;
 
 import com.cubic_control.UpdateCraft.Blocks.MBlocks;
+import com.cubic_control.UpdateCraft.Blocks.ModBlockBed;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -47,6 +49,22 @@ public class MItems {
 	public static Item shulker_shell;
 	public static Item totem_of_undying;
 	//1.12
+	public static Item bed_black;
+	public static Item bed_red;
+	public static Item bed_green;
+	public static Item bed_brown;
+	public static Item bed_blue;
+	public static Item bed_purple;
+	public static Item bed_cyan;
+	public static Item bed_silver;
+	public static Item bed_gray;
+	public static Item bed_pink;
+	public static Item bed_lime;
+	public static Item bed_yellow;
+	public static Item bed_light_blue;
+	public static Item bed_magenta;
+	public static Item bed_orange;
+	public static Item bed_white;
 	//Universal
 	public static Item spawn_egg;
 	
@@ -89,6 +107,22 @@ public class MItems {
 		shulker_shell = new ModItem("shulker_shell");
 		totem_of_undying = new ModItem("totem").setMaxStackSize(1);
 		//1.12
+		bed_black = new ModItemBed("bed_black", MBlocks.bed_black);
+		bed_red = new ModItemBed("bed_red", MBlocks.bed_red);
+		bed_green = new ModItemBed("bed_green", MBlocks.bed_green);
+		bed_brown = new ModItemBed("bed_brown", MBlocks.bed_brown);
+		bed_blue = new ModItemBed("bed_blue", MBlocks.bed_blue);
+		bed_purple = new ModItemBed("bed_purple", MBlocks.bed_purple);
+		bed_cyan = new ModItemBed("bed_cyan", MBlocks.bed_cyan);
+		bed_silver = new ModItemBed("bed_silver", MBlocks.bed_silver);
+		bed_gray = new ModItemBed("bed_gray", MBlocks.bed_gray);
+		bed_pink = new ModItemBed("bed_pink", MBlocks.bed_pink);
+		bed_lime = new ModItemBed("bed_lime", MBlocks.bed_lime);
+		bed_yellow = new ModItemBed("bed_yellow", MBlocks.bed_yellow);
+		bed_light_blue = new ModItemBed("bed_light_blue", MBlocks.bed_light_blue);
+		bed_magenta = new ModItemBed("bed_magenta", MBlocks.bed_magenta);
+		bed_orange = new ModItemBed("bed_orange", MBlocks.bed_orange);
+		bed_white = new ModItemBed("bed_white", MBlocks.bed_white);
 	}
 	
 	public static void changeItem(){

@@ -1,2 +1,205 @@
-death.attack.Magma=%1$s discovered floor was lava
-death.attack.Magma.player=%1$s walked into danger zone due to %2$s
+//Blocks
+    //1.8
+tile.diorite.name=Diorite
+tile.diorite_smooth.name=Polished Diorite
+tile.andesite.name=Andesite
+tile.andesite_smooth.name=Polished Andesite
+tile.granite.name=Granite
+tile.granite_smooth.name=Polished Granite
+tile.coarse_dirt.name=Coarse Dirt
+tile.prismarine_rough.name=Prismarine
+tile.prismarine_bricks.name=Prismarine Bricks
+tile.prismarine_dark.name=Dark Prismarine
+tile.red_sandstone_normal.name=Red Sandstone
+tile.red_sandstone_smooth.name=Smooth Red Sandstone
+tile.red_sandstone_carved.name=Chiseled Red Sandstone
+tile.iron_trapdoor.name=Iron Trapdoor
+tile.sea_lantern.name=Sea Lantern
+tile.sponge.name=Sponge
+tile.slime.name=Slime
+//
+//
+//
+tile.oak_fence.name=Oak Fence
+tile.spruce_fence.name=Spruce Fence
+tile.birch_fence.name=Birch Fence
+tile.jungle_fence.name=Jungle Fence
+tile.dark_oak_fence.name=Dark Oak Fence
+tile.acacia_fence.name=Acacia Fence
+tile.spruce_fence_gate.name=Spruce Fence Gate
+tile.birch_fence_gate.name=Birch Fence Gate
+tile.jungle_fence_gate.name=Jungle Fence Gate
+tile.dark_oak_fence_gate.name=Dark Oak Fence Gate
+tile.acacia_fence_gate.name=Acacia Fence Gate
+tile.door_spruce.name=Spruce Door
+tile.door_birch.name=Birch Door
+tile.door_jungle.name=Jungle Door
+tile.door_acacia.name=Acacia Door
+tile.door_dark_oak.name=Dark Oak Door
+    //1.9
+tile.beetroots.name=Beetroots
+tile.chorus_flower.name=Chorus Flower
+tile.chorus_plant.name=Chorus Plant
+tile.end_rod.name=End Rod
+    //1.10
+tile.magma.name=Magma
+tile.nether_wart_block.name=Nether Wart Block
+tile.red_nether_brick.name=Red Nether Brick
+tile.bone_block.name=Bone Block
+    //1.11
+    //1.12
+tile.concrete_0.name=White Concrete
+tile.concrete_1.name=Orange Concrete
+tile.concrete_2.name=Magenta Concrete
+tile.concrete_3.name=Light Blue Concrete
+tile.concrete_4.name=Yellow Concrete
+tile.concrete_5.name=Lime Concrete
+tile.concrete_6.name=Pink Concrete
+tile.concrete_7.name=Gray Concrete
+tile.concrete_8.name=Light Gray Concrete
+tile.concrete_9.name=Cyan Concrete
+tile.concrete_10.name=Purple Concrete
+tile.concrete_11.name=Blue Concrete
+tile.concrete_12.name=Brown Concrete
+tile.concrete_13.name=Green Concrete
+tile.concrete_14.name=Red Concrete
+tile.concrete_15.name=Black Concrete
+tile.concrete_powder_0.name=White Concrete Powder
+tile.concrete_powder_1.name=Orange Concrete Powder
+tile.concrete_powder_2.name=Magenta Concrete Powder
+tile.concrete_powder_3.name=Light Blue Concrete Powder
+tile.concrete_powder_4.name=Yellow Concrete Powder
+tile.concrete_powder_5.name=Lime Concrete Powder
+tile.concrete_powder_6.name=Pink Concrete Powder
+tile.concrete_powder_7.name=Gray Concrete Powder
+tile.concrete_powder_8.name=Light Gray Concrete Powder
+tile.concrete_powder_9.name=Cyan Concrete Powder
+tile.concrete_powder_10.name=Purple Concrete Powder
+tile.concrete_powder_11.name=Blue Concrete Powder
+tile.concrete_powder_12.name=Brown Concrete Powder
+tile.concrete_powder_13.name=Green Concrete Powder
+tile.concrete_powder_14.name=Red Concrete Powder
+tile.concrete_powder_15.name=Black Concrete Powder
+tile.glazed_terracotta_white.name=White Glazed Terracotta
+tile.glazed_terracotta_orange.name=Orange Glazed Terracotta
+tile.glazed_terracotta_magenta.name=Magenta Glazed Terracotta
+tile.glazed_terracotta_light_blue.name=Light Blue Glazed Terracotta
+tile.glazed_terracotta_yellow.name=Yellow Glazed Terracotta
+tile.glazed_terracotta_lime.name=Lime Glazed Terracotta
+tile.glazed_terracotta_pink.name=Pink Glazed Terracotta
+tile.glazed_terracotta_gray.name=Gray Glazed Terracotta
+tile.glazed_terracotta_silver.name=Light Gray Glazed Terracotta
+tile.glazed_terracotta_cyan.name=Cyan Glazed Terracotta
+tile.glazed_terracotta_purple.name=Purple Glazed Terracotta
+tile.glazed_terracotta_blue.name=Blue Glazed Terracotta
+tile.glazed_terracotta_brown.name=Brown Glazed Terracotta
+tile.glazed_terracotta_green.name=Green Glazed Terracotta
+tile.glazed_terracotta_red.name=Red Glazed Terracotta
+tile.glazed_terracotta_black.name=Black Glazed Terracotta
+tile.bed_black.name=Bed Black
+tile.bed_red.name=Bed Red
+tile.bed_green.name=Bed Green
+tile.bed_brown.name=Bed Brown
+tile.bed_blue.name=Bed Blue
+tile.bed_purple.name=Bed Purple
+tile.bed_cyan.name=Bed Cyan
+tile.bed_silver.name=Bed Silver
+tile.bed_gray.name=Bed Gray
+tile.bed_pink.name=Bed Pink
+tile.bed_lime.name=Bed Lime
+tile.bed_yellow.name=Bed Yellow
+tile.bed_light_blue.name=Bed Light Blue
+tile.bed_magenta.name=Bed Magenta
+tile.bed_orange.name=Bed Orange
+tile.bed_white.name=Bed White
+    //_Custom
+tile.piston.name=Piston
+tile.sticky_piston.name=Sticky Piston
+tile.piston_head.name=Piston Head
+
+//_Items
+    //_1.8
+item.prismarine_crystals.name=Prismarine Crystals
+item.prismarine_shard.name=Prismarine Shard
+item.mutton_raw.name=Raw Mutton
+item.mutton_cooked.name=Cooked Mutton
+item.rabbit_raw.name=Raw Rabbit
+item.rabbit_cooked.name=Cooked Rabbit
+item.rabbit_stew.name=Rabbit Stew
+item.rabbit_hide.name=Rabbit Hide
+item.rabbit_foot.name=Rabbit's Foot
+item.spawn_egg_endermite.name=Spawn Endermite
+item.spawn_egg_rabbit.name=Spawn Rabbit
+        //banner = new ModItemBanner("banner");
+item.spruce_door.name=Spruce Door
+item.birch_door.name=Birch Door
+item.jungle_door.name=Jungle Door
+item.acacia_door.name=Acacia Door
+item.dark_oak_door.name=Dark Oak Door
+item.wooden_armorstand.name=Armor Stand
+    //_1.9
+item.beetroot.name=Beetroot
+item.beetroot_soup.name=Beetroot Soup
+item.beetroot_seeds.name=Beetroot Seeds
+item.chorus_fruit.name=Chorus Fruit
+item.dragon_breath.name=Dragon Breath
+item.elytra.name=Elytra
+item.end_crystal.name=End Crystal
+potion.prefix.lingering=Lingering
+item.chorus_fruit_popped.name=Popped Chorus Fruit
+//
+item.shield.name=Shield
+        //spectral_arrow = new ModItemSpectralArrow();
+\\See: "_Arrow"//
+    //_1.10
+    //_1.11
+item.shulker_shell.name=Shulker Shell
+item.totem.name=Totem of Undying
+    //_1.12
+item.bed_black_item.name=Bed Black
+item.bed_red_item.name=Bed Red
+item.bed_green_item.name=Bed Green
+item.bed_brown_item.name=Bed Brown
+item.bed_blue_item.name=Bed Blue
+item.bed_purple_item.name=Bed Purple
+item.bed_cyan_item.name=Bed Cyan
+item.bed_silver_item.name=Bed Silver
+item.bed_gray_item.name=Bed Gray
+item.bed_pink_item.name=Bed Pink
+item.bed_lime_item.name=Bed Lime
+item.bed_yellow_item.name=Bed Yellow
+item.bed_light_blue_item.name=Bed Light Blue
+item.bed_magenta_item.name=Bed Magenta
+item.bed_orange_item.name=Bed Orange
+item.bed_white_item.name=Bed White
+
+//_Arrow
+tipped_arrow.potion.nightVision.name=Arrow of Night Vision
+tipped_arrow.potion.invisibility.name=Arrow of Invisibility
+tipped_arrow.potion.jump.name=Arrow of Leaping
+tipped_arrow.potion.fireResistance.name=Arrow of Fire Resistance
+tipped_arrow.potion.moveSpeed.name=Arrow of Swiftness
+tipped_arrow.potion.moveSlowdown.name=Arrow of Slowness
+tipped_arrow.potion.waterBreathing.name=Arrow of Water Breathing
+tipped_arrow.potion.heal.name=Arrow of Healing
+tipped_arrow.potion.harm.name=Arrow of Harming
+tipped_arrow.potion.poison.name=Arrow of Poison
+tipped_arrow.potion.regeneration.name=Arrow of Regeneration
+tipped_arrow.potion.damageBoost.name=Arrow of Strength
+tipped_arrow.potion.weakness.name=Arrow of Weakness
+
+//CreativeTabs
+itemGroup.UpdateCraft:tabBlocks=UpdateCraft: Blocks
+itemGroup.UpdateCraft:tabItems=UpdateCraft: Items
+
+//Entities
+entity.UpdateCraft.endermite.name=Endermite
+entity.UpdateCraft.lingering_potion.name=Lingering Potion
+entity.UpdateCraft.lingering_effect.name=Lingering Effect
+entity.UpdateCraft.rabbit.name=Rabbit
+    //Non-Mob Entities
+entity.UpdateCraft.armor_stand.name=Armor Stand
+
+//Death Messages
+death.attack.hotFloor=%1$s discovered floor was lava
+death.attack.hotFloor.player=%1$s walked into danger zone due to %2$s

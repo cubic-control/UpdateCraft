@@ -2,16 +2,22 @@ package com.cubic_control.UpdateCraft.Main;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Consumer;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.ShapedRecipes;
+import net.minecraft.item.crafting.ShapelessRecipes;
+import net.minecraft.nbt.NBTTagCompound;
 
 import com.cubic_control.UpdateCraft.Blocks.MBlocks;
 import com.cubic_control.UpdateCraft.Items.MItems;
+import com.cubic_control.UpdateCraft.Utils.ModUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -65,7 +71,7 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(Items.leather), "XX", "XX", 'X', MItems.rabbit_hide);
 		GameRegistry.addRecipe(new ItemStack(MItems.armor_stand), "sss", " s ", "sSs", 's', Items.stick, 'S', Blocks.stone_slab);
 		//1.9
-		//GameRegistry.addRecipe(new ItemStack(MBlocks.end_rod), "X", "Y", 'X', Items.blaze_rod, 'Y', MItems.chorus_fruit_popped);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.end_rod, 4), "X", "Y", 'X', Items.blaze_rod, 'Y', MItems.chorus_fruit_popped);
 		//GameRegistry.addRecipe(new ItemStack(MBlocks.end_bricks), "XX", "XX", 'X', Blocks.end_stone);
 		//GameRegistry.addRecipe(new ItemStack(MBlocks.purpur_block), "XX", "XX", 'X', MItems.chorus_fruit_popped);
 		//GameRegistry.addRecipe(new ItemStack(MBlocks.purpur_pillar), "X", "X", 'X', MBlocks.purpur_slab);
@@ -78,7 +84,7 @@ public class MCraftingManager {
 		GameRegistry.addRecipe(new ItemStack(MBlocks.nether_wart_block), "nnn", "nnn", "nnn", 'n', Items.nether_wart);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.red_nether_brick), "wb", "bw", 'w', Items.nether_wart, 'b', Items.netherbrick);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.bone_block), "bbb", "bbb", "bbb", 'b', new ItemStack(Items.dye, 1, 15));
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 9, 15), MBlocks.bone_block);
+		GameRegistry.addRecipe(new ItemStack(Items.dye, 9, 15), "X", 'X', MBlocks.bone_block);
 		//1.11
 		//1.12
 		for(int i = 0; i < 16; i++){
@@ -106,26 +112,125 @@ public class MCraftingManager {
 		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 13), new ItemStack(MBlocks.green_glazed_terracotta), 0f);
 		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 14), new ItemStack(MBlocks.red_glazed_terracotta), 0f);
 		GameRegistry.addSmelting(new ItemStack(Blocks.stained_hardened_clay, 1, 15), new ItemStack(MBlocks.black_glazed_terracotta), 0f);
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_white), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 0), 'w', Blocks.planks);
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_orange), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 1), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_orange), MItems.bed_white, new ItemStack(Items.dye, 1, 14));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_magenta), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 2), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_magenta), MItems.bed_white, new ItemStack(Items.dye, 1, 13));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_light_blue), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 3), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_light_blue), MItems.bed_white, new ItemStack(Items.dye, 1, 12));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_yellow), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 4), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_yellow), MItems.bed_white, new ItemStack(Items.dye, 1, 11));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_lime), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 5), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_lime), MItems.bed_white, new ItemStack(Items.dye, 1, 10));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_pink), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 6), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_pink), MItems.bed_white, new ItemStack(Items.dye, 1, 9));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_gray), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 7), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_gray), MItems.bed_white, new ItemStack(Items.dye, 1, 8));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_silver), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 8), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_silver), MItems.bed_white, new ItemStack(Items.dye, 1, 7));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_cyan), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 9), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_cyan), MItems.bed_white, new ItemStack(Items.dye, 1, 6));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_purple), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 10), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_purple), MItems.bed_white, new ItemStack(Items.dye, 1, 5));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_blue), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 11), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_blue), MItems.bed_white, new ItemStack(Items.dye, 1, 4));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_brown), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 12), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_brown), MItems.bed_white, new ItemStack(Items.dye, 1, 3));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_green), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 13), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_green), MItems.bed_white, new ItemStack(Items.dye, 1, 2));
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_red), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 14), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_red), MItems.bed_white, new ItemStack(Items.dye, 1, 1));
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_red), Items.bed);
+		GameRegistry.addRecipe(new ItemStack(MItems.bed_black), "xxx", "www", 'x', new ItemStack(Blocks.wool, 1, 15), 'w', Blocks.planks);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bed_black), MItems.bed_white, new ItemStack(Items.dye, 1, 0));
 	}
 	public static void removeRecipes(){
 		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
 		
 		Iterator<IRecipe> Leash = recipes.iterator();
 		
-			while (Leash.hasNext()) {
+			while(Leash.hasNext()){
 				ItemStack is = Leash.next().getRecipeOutput();
-				if (is != null && is.getItem() == Item.getItemFromBlock(Blocks.fence)){
+				if(is != null && is.getItem() == Item.getItemFromBlock(Blocks.fence)){
 					Leash.remove();
 				}
-				if (is != null && is.getItem() == Item.getItemFromBlock(Blocks.fence_gate)){
+				if(is != null && is.getItem() == Item.getItemFromBlock(Blocks.fence_gate)){
 					Leash.remove();
 				}
-				if (is != null && is.getItem() == Items.wooden_door){
+				if(is != null && is.getItem() == Items.wooden_door){
 					Leash.remove();
 				}
-				if (is != null && is.getItem() == Items.iron_door){
+				if(is != null && is.getItem() == Items.iron_door){
 					Leash.remove();
 				}
 			};
 	}
+	public static void changeRecipes(){
+		ModUtils.replaceItemInRecipe(Blocks.piston, MBlocks.piston);
+		ModUtils.replaceItemInRecipe(Blocks.sticky_piston, MBlocks.stickyPiston);
+		ModUtils.replaceItemInRecipe(Blocks.fence, MBlocks.oak_fence);
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.piston), Blocks.piston);
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.stickyPiston), Blocks.sticky_piston);
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.oak_fence), Blocks.fence);
+		/*
+		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
+		Iterator<IRecipe> it = recipes.iterator();
+		
+		while(it.hasNext()){
+			IRecipe recipe = it.next();
+			
+			// Shaped
+			if(recipe instanceof ShapedRecipes){
+				ItemStack[] stacks = ((ShapedRecipes)recipe).recipeItems;
+				
+				for(int i1 = 0; i1 < stacks.length; i1++){
+					if(stacks[i1] != null){
+						Item item = stacks[i1].getItem();
+						
+						if(item == Item.getItemFromBlock(Blocks.piston)){
+							stacks[i1].func_150996_a(Item.getItemFromBlock(MBlocks.piston));
+						}
+						if(item == Item.getItemFromBlock(Blocks.sticky_piston)){
+							stacks[i1].func_150996_a(Item.getItemFromBlock(MBlocks.stickyPiston));
+						}
+						if(item == Item.getItemFromBlock(Blocks.fence)){
+							stacks[i1].func_150996_a(Item.getItemFromBlock(MBlocks.oak_fence));
+						}
+					}
+				}
+			}
+			// Shapeless
+			if(recipe instanceof ShapelessRecipes){
+				List list = ((ShapelessRecipes)recipe).recipeItems;
+				
+				for(int i1 = 0; i1 < list.size(); i1++){
+					if(list.get(i1) != null){
+						ItemStack stack = (ItemStack)list.get(i1);
+						Item item = stack.getItem();
+						
+						if(item == Item.getItemFromBlock(Blocks.piston)){
+							stack.func_150996_a(Item.getItemFromBlock(MBlocks.piston));
+						}
+						if(item == Item.getItemFromBlock(Blocks.sticky_piston)){
+							stack.func_150996_a(Item.getItemFromBlock(MBlocks.stickyPiston));
+						}
+						if(item == Item.getItemFromBlock(Blocks.fence)){
+							stack.func_150996_a(Item.getItemFromBlock(MBlocks.oak_fence));
+						}
+					}
+				}
+			}
+			// Output
+			ItemStack stack = recipe.getRecipeOutput();
+			
+			if(stack != null && stack.getItem() == Item.getItemFromBlock(Blocks.piston)){
+				stack.func_150996_a(Item.getItemFromBlock(MBlocks.piston));
+			}
+			if(stack != null && stack.getItem() == Item.getItemFromBlock(Blocks.sticky_piston)){
+				stack.func_150996_a(Item.getItemFromBlock(MBlocks.stickyPiston));
+			}
+		}*/
+	}
+	
 }

@@ -10,26 +10,11 @@ import net.minecraft.block.material.Material;
 public class ModBlock extends Block{
 
 	protected ModBlock(Material par1, String par2, float par3, String par4, int par5, float par6, SoundType par7) {
-		super(par1);
-		this.setBlockName(par2);
-		this.setBlockTextureName(RefStrings.MODID + ":" + par2);
-		this.setCreativeTab(MCreativeTabs.tabBlocks);
-		this.setHardness(par3);
-		this.setHarvestLevel(par4, par5);
-		this.setResistance(par6);
-		this.setStepSound(par7);
-		GameRegistry.registerBlock(this, par2);
+		this(par1, par2, par2, par3, par4, par5, par6, par7);
 	}
 	
 	protected ModBlock(Material par1, String par2, float par3, float par6, SoundType par7) {
-		super(par1);
-		this.setBlockName(par2);
-		this.setBlockTextureName(RefStrings.MODID + ":" + par2);
-		this.setCreativeTab(MCreativeTabs.tabBlocks);
-		this.setHardness(par3);
-		this.setResistance(par6);
-		this.setStepSound(par7);
-		GameRegistry.registerBlock(this, par2);
+		this(par1, par2, par2, par3, "", 0, par6, par7);
 	}
 	
 	protected ModBlock(Material par1, String par2, String par3, float par4, String par5, int par6, float par7, SoundType par8) {
